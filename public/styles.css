@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Barriecito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Schoolbell&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Englebert&family=Schoolbell&display=swap");
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  background-color: #fde2c7;
+  background-image: url("/assets/images/Joke_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.container_con {
+  background-color: #ffffff03;
+  margin: 25%;
+  color: #000000;
+  border-radius: 20px;
+  box-shadow: rgb(0 0 0 / 30%) 0px 22px 70px 4px;
+  padding: 50px;
+  backdrop-filter: blur(10px);
+}
+
+.container_con h1 {
+  margin-bottom: 6%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.joke_line {
+  font-family: "Englebert", cursive;
+  letter-spacing: 1.1px;
+}
+
+.main_form {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.custom-btn {
+  width: 100%;
+  max-width: 200px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.btn-11 {
+  border: none;
+  background: rgb(251, 33, 117);
+  background: linear-gradient(0deg, rgb(180 52 83) 0%, rgb(250 146 113) 100%);
+  color: #fff;
+  overflow: hidden;
+}
+
+.btn-11:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-11:before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+  animation: shiny-btn1 3s ease-in-out infinite;
+}
+
+.btn-11:hover {
+  opacity: 0.7;
+}
+
+.btn-11:active {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+@-webkit-keyframes shiny-btn1 {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.category-dropdown {
+  width: 35%;
+  height: auto;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  appearance: none; /* Removes default OS styling */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 6.646a.5.5 0 0 1 .708 0L8 9.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+.category-dropdown:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(251, 33, 117, 0.5);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #000000;
+  display: block;
+  background-color: #ffe8d1;
+  width: 100%;
+  text-align: end;
+  padding-right: 10px;
+  font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .container_con {
+    padding: 30px 15px;
+    margin: 15%;
+    height: auto;
+  }
+
+  .joke_line {
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+
+  .container_con h1 {
+    font-size: 2rem;
+  }
+
+  .custom-btn {
+    font-size: 14px;
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .category-dropdown {
+    width: auto;
+    font-size: 0.8rem;
+  }
+
+  .custom-btn {
+    max-width: none;
+  }
+
+  .main_form {
+    flex-direction: column;
+    align-items: normal;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    background-size: cover;
+    padding: 10px;
+  }
+
+  .container_con h1 {
+    font-size: 1.8rem;
+  }
+
+  .joke_line {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .container_con {
+    margin: 10%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .container_con h1 {
+    font-size: 1.5rem;
+  }
+}

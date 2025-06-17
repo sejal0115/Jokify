@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jokify</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/images/favicon-16x16.png"
+    />
+    <link rel="icon" type="image/png" href="/assets/images/favicon.ico" />
+  </head>
+  <body>
+    <div class="container_con">
+      <h1>Get a Random Joke</h1>
+
+      <% if (typeof joke !== "undefined" && joke) { %>
+      <p class="joke_line"><%= joke %></p>
+      <% } %>
+      <br />
+      <form class="main_form" action="/joke" method="POST">
+        <select name="category" class="category-dropdown">
+          <option value="Any">Any</option>
+          <option value="Programming">Programming</option>
+          <option value="Dark">Dark</option>
+          <option value="Pun">Pun</option>
+          <option value="Spooky">Spooky</option>
+          <option value="Misc">Miscellaneous</option>
+        </select>
+        <br />
+
+        <button class="custom-btn btn-11" type="submit">Tell me a Joke!</button>
+      </form>
+    </div>
+    <footer>Made with ❤️ by Sejal Mahadik</footer>
+  </body>
+</html>
