@@ -14,14 +14,15 @@ app.set("view engine", "ejs");
 
 // Routes
 app.get("/", (req, res) => {
-    res.render("index", { joke: null });
+    res.render("index", { joke: null, selectedCategory: "Any" });
 });
 
 
 app.post("/joke", async (req, res) => {
+
     const category = req.body.category || "Any";
     try {
-        const response = await axios.get(`https://v2.jokeapi.dev/joke/${category}?`);
+        const response = await axios.get(`https://v2.jokeapi.dev/joke/${category}?safe-mode`);
         let joke;
 
         if (response.data.type === "single") {
@@ -30,7 +31,7 @@ app.post("/joke", async (req, res) => {
             joke = `${response.data.setup} 🤔 ${response.data.delivery}`;
         }
 
-        res.render("index", { joke });
+        res.render("index", { joke, selectedCategory: category });
     } catch (error) {
         console.error(error.message);
         res.render("index", { joke: "Sorry, couldn't fetch a joke." });

@@ -28,15 +28,15 @@
       <% } %>
       <br />
       <form class="main_form" action="/joke" method="POST">
-        <select name="category" class="category-dropdown">
-          <option value="Any">Any</option>
-          <option value="Programming">Programming</option>
-          <option value="Misc">Miscellaneous</option>
-          <option value="Pun">Pun</option>
-          <option value="Spooky">Spooky</option>
-          <option value="Christmas">Christmas</option>
-          <option value="Dark">Dark</option>
-        </select>
+       <select name="category" class="category-dropdown">
+          <option value="Any" <%= selectedCategory === "Any" ? "selected" : "" %>>Any</option>
+          <option value="Programming" <%= selectedCategory === "Programming" ? "selected" : "" %>>Programming</option>
+          <option value="Misc" <%= selectedCategory === "Misc" ? "selected" : "" %>>Miscellaneous</option>
+          <option value="Pun" <%= selectedCategory === "Pun" ? "selected" : "" %>>Pun</option>
+          <option value="Spooky" <%= selectedCategory === "Spooky" ? "selected" : "" %>>Spooky</option>
+          <option value="Christmas" <%= selectedCategory === "Christmas" ? "selected" : "" %>>Christmas</option>
+          <!-- <option value="Dark" <%= selectedCategory === "Dark" ? "selected" : "" %>>Dark</option> -->
+      </select>
 
         <br />
 
