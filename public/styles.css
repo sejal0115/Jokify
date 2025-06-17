@@ -16,6 +16,7 @@ body {
   background-size: cover;
   background-position: center;
   overflow: hidden;
+  backdrop-filter: blur(3px);
 }
 
 .container_con {
@@ -148,11 +149,12 @@ footer {
   right: 0;
   color: #000000;
   display: block;
-  background-color: #ffe8d1;
+  background-color: #ffe8d100;
   width: 100%;
   text-align: end;
   padding-right: 10px;
   font-size: 0.8rem;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 768px) {
